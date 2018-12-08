@@ -1,0 +1,16 @@
+[package]
+name = "rust-custom-section-issue"
+version = "0.1.0"
+authors = ["Jan Bujak <j@exia.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+dependency = { path = "dependency" }
+
+[features]
+default = []
+working = ["dependency/working"]
+broken = ["dependency/broken"]
