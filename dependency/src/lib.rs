@@ -6,8 +6,8 @@ pub fn trigger() {
 }
 
 #[cfg(feature = "broken")]
-mod submodule {
-    pub(super) fn call() {
+pub mod submodule {
+    pub fn call() {
         #[link_section = "some-custom-section"]
         static SNIPPET: [u8; 3] = [b'X', b'Y', b'Z'];
 
